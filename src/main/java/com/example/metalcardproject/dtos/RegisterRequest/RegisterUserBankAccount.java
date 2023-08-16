@@ -1,20 +1,19 @@
-package Data.Model;
+package com.example.metalcardproject.dtos.RegisterRequest;
 
-import java.math.BigDecimal;
+import lombok.Builder;
+import lombok.Data;
+
 import java.time.LocalDate;
 
-public class Account {
-    private String id;
+@Data
+@Builder
+public class RegisterUserBankAccount {
     private String firstName;
     private String lastName;
     private String AccountNumber;
     private String password;
     private String emailAddress;
-    private BankCard ATMCard;
     private String phoneNumber;
     private LocalDate dob;
     private String pin;
-    private BigDecimal balance = BigDecimal.ZERO;
-
-
 }

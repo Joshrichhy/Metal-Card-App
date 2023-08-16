@@ -4,4 +4,6 @@ import com.example.metalcardproject.Data.Model.MetalCard;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface MetalCardRepository extends MongoRepository <MetalCard, String> {
+
+    MetalCard findByCardNumberAndCvv(String metalCardNumber, String metalCardCvv);
 }
